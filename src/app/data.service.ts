@@ -19,7 +19,7 @@ export class DataService {
     const observer: Observable<any> = this.http.get('https://randomuser.me/api/?results=10');
     observer.subscribe((val)=>val.results.forEach(val=> {
       this.addTodo({
-        text: val.name.first,
+        text: val.name.first + ' ' + val.name.last,
         image: val.picture.thumbnail
       });
     }), err=>{if(err) throw new Error});

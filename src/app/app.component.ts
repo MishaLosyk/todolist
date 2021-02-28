@@ -23,7 +23,7 @@ export class AppComponent implements OnInit{
   }
 
   randomImage(): string {
-    return `../assets/man${Math.floor(Math.random()*(4-1)+1)}.png`
+    return `assets/man${Math.floor(Math.random()*(4-1)+1)}.png`
   }
   
   submit (): void {
